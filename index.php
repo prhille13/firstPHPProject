@@ -12,17 +12,19 @@
 </head>
 <body>
    <?php
-    $title = "The Neverending Story";
-    $haveRead = false;
+    $books = [
+            "The Neverending Story",
+            "The Perks of Being a Wallflower",
+            "DUNE"
+    ];
 
-    if($haveRead){
-        $message = "You have read $title";
-    }else {
-        $message = "You have not read $title";
-    }
    ?>
     <h1>
-        <?php echo $message ?>
+        <ul>
+            <?php foreach ($books as $book) : ?>
+                <li><?=$book?></li>
+            <?php endforeach; ?>
+        </ul>
     </h1>
 </body>
 </html>
